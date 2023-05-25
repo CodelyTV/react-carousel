@@ -1,0 +1,30 @@
+name: CI
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: 🧪 Lint and test
+
+    steps:
+      - name: 👍 Checkout
+        uses: actions/checkout@v3
+
+      - name: ❇️ Setup node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+
+      - name: 📥 Install Dependencies
+        run: npm install
+
+      - name: 💅 Lint
+        run: npm run lint
+
+      - name: 🧪 Unit Tests
+        run: npm run test
+
+      - name: 🧑‍🔬 Component Tests
+        run: npm run cy:run

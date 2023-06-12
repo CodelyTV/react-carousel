@@ -5,80 +5,107 @@
 </p>
 
 <h1 align="center">
-  <⚡⚛️> Vite React Library Template (by Codely)
+  🎠 Codely Carousel
 </h1>
 
 <p align="center">
-    <a href="https://github.com/CodelyTV/typescript-react_library-vite_template/actions/workflows/ci.yml"><img src="https://github.com/CodelyTV/typescript-react_library-vite_template/actions/workflows/ci.yml/badge.svg" alt="Build status"/></a>
+    <a href="https://github.com/CodelyTV/react-carousel/actions/workflows/publish.yml"><img src="https://github.com/CodelyTV/react-carousel/actions/workflows/publish.yml/badge.svg" alt="Build status"/></a>
+    <a href="https://www.npmjs.com/package/@codelytv/react-carousel"><img src="https://img.shields.io/npm/v/@codelytv/react-carousel" alt="NPM version"/></a>
     <a href="https://github.com/CodelyTV"><img src="https://img.shields.io/badge/CodelyTV-OS-green.svg?style=flat-square" alt="Codely Open Source"/></a>
-    <a href="https://pro.codely.com"><img src="https://img.shields.io/badge/CodelyTV-PRO-black.svg?style=flat-square" alt="Codely Pro Courses"/></a>
+    <a href="https://pro.codely.com"><img src="https://img.shields.io/badge/CodelyTV-PRO-black.svg?style=flat-square" alt="CodelyTV Courses"/></a>
 </p>
 
 <p align="center">
-  Template for creating React libraries with TypeScript following best practices: Storybook for documentation, testing, Continuous Integration, and linting.
-  <br />
-  <br />
-  <a href="https://github.com/CodelyTV/typescript-react_library-vite_template/stargazers">Stars are welcome 😊</a>
+  <a href="https://github.com/CodelyTV/react-carousel/stargazers">Stars are welcome 😊</a>
 </p>
 
-## 📚 Documentation
+## ✨ Features
 
-- `npm run docs`: Run Storybook documentation in dev mode
-- `npm run build:docs`: Build Storybook documentation
+- Automagically responsive:
+  - Any size: no need to set a specific size via props
+  - Multiple items: no need to set the number of items per "page"
+- Supports images, videos, everything: each direct child is a slide
+- Scroll based: works on mobile or trackpad
+- Control buttons
+- Custom styling
+- Accessible by default
+- Show next/previous items partially
+- Works with server-side rendering
 
-## ✅ Testing
+## ⚙️ How to use
 
-```
-  npm run cy:open: Open Cypress in dev mode
-  npm run cy:run: Execute Cypress in CLI
-```
+1. Install the dependency
+    ```
+    npm install @codelytv/react-carousel
+    ```
+    or
+    ```
+    yarn @codelytv/react-carousel
+    ```
+2. Import and use:
+    ```
+      import { Carousel } from "@codelytv/react-carousel"
+    ```
+    ```jsx
+    <Carousel>
+      <div>A simple slide</div>
+      <div><img src="https://placekitten.com/500/500" alt="a slide can contain anything" /></div>
+      <article>
+        <h2>It can be any tag</h2>
+        <p>and contain any number of items</p>
+      </article>
+    </Carousel>
+    ```
+    The carousel automatically detects the size of each slide and when navigating via buttons, it will scroll smoothly until the first not visible slide is in view.
 
-## 🔦 Linting
+### Props
+
+| Name                             | Value               | Default                     | Description                 |
+| -------------------------------- | ------------------- | --------------------------- | --------------------------- |
+| prevButtonContent                | `React.ReactNode`   | [`<ArrowLeft />`](https://github.com/CodelyTV/react-carousel/tree/main/src/components/ArrowLeft.tsx)   | The HTML content of the previous navigation button |
+| nextButtonContent                | `React.ReactNode`   | [`<ArrowRight />`](https://github.com/CodelyTV/react-carousel/tree/main/src/components/ArrowRight.tsx) | The HTML content of the next navigation button     |
+| prevAriaLabel                    | `string`            | "Previous"                  | Defines the previous navigation button `aria-label` attribute. Useful when the button content is an element without accessible text. |
+| nextAriaLabel                    | `string`            | "Next"                      | Defines the previous navigation button `aria-label` attribute. Useful when the button content is an element without accessible text. |
+
+### 🎨 Styling
+There are some CSS Variables that will help you style the carousel:
+
+| Name                             | Default             | Description                                   |
+| -------------------------------- | ------------------- | --------------------------------------------- |
+| --slider-gap                     | 0                   | Sets the gap between slides                   |
+| --slider-nav-margin-top          | 0.5rem              | Sets the top margin of the navigation buttons |
+| --slider-button-width            | 2.5rem              | Sets the navigation buttons width             |
+| --slider-button-height           | 2.5rem              | Sets the navigation buttons height            |
+| --slider-button-padding          | 0.2rem              | Sets the padding of the navigation buttons    |
+
+If this is not enough, you can always style via CSS classes. They all have low specificity so they are easy to overwrite, but be careful, changing this elements could cause the carousel to break. Try to limit the changes to colors, background, etc. to prevent unexpected results.
+
+| Class                 | Description                            |
+| --------------------- | -------------------------------------- |
+| .carousel             | The main carousel wrapper              |
+| .carousel__slider     | The carousel scroller                  |
+| .carousel__slide      | The wrapper for each slide             |
+| .carousel__nav        | The wrapper for the navigation buttons |
+| .carousel__button     | The navigation buttons                 |
+
+
+## 🤝 Contributing
+
+### 📚 Run
+
+- `npm run build`: Compiles the Carousel package
+- `npm run storybook`: Opens Storybook documentation with all of the Carousel demos
+
+### ✅ Testing
+
+`npm run test`: Run unit tests with Jest and React Testing Library
+
+### 🔦 Linting
 
 - `npm run lint`: Run linter
 - `npm run lint:fix`: Fix lint issues
 
-## 🚀 CI and Publishing
-
-This template comes with a GitHub Actions workflow to automatically publish on any push to `main` when the `package.json` version number differs from the latest on npm. Please note that you need to create the package on NPM first.
-
-For it to work you will need to add an `NPM_TOKEN` secret to your repo:
-
-1. Create an automation token in NPM
-   - [Documentation on npm tokens](https://docs.npmjs.com/about-access-tokens) and how to create them
-2. Go to your GitHub Repository Settings / Secrets / Actions
-3. Click on the "New repository secret" button
-4. Fill in the form:
-   - Name: `NPM_TOKEN`
-   - Secret: the NPM token value
-
-Read the [full documentation on the npm-publish action](https://github.com/JS-DevTools/npm-publish).
-
-## 🌈 Tech Stack
-
-- [TypeScript](https://www.typescriptlang.org)
-- [Storybook](https://storybook.js.org/)
-- [ESLint](https://eslint.org) and [Prettier](https://prettier.io) already configured with the [🤏 Codely's configuration](https://github.com/CodelyTV/eslint-config-codely)
-- [Cypress](https://www.cypress.io/) with [Testing Library](https://testing-library.com/docs/cypress-testing-library) for acceptance/component tests
-- [GitHub Action Workflows](https://github.com/features/actions) set up to run tests and linting on push
-- [Makefile](https://github.com/CodelyTV/typescript-react_library-vite_template/blob/main/Makefile) for standardize how to run projects
-- [Sass](https://sass-lang.com) to supercharge CSS with nested classes and more fun
-- [.editorconfig](https://editorconfig.org) for sharing the IDE config
-
-## 🤔 FAQ
-
-### 👻 Why not adding `.vscode` or `.idea` to the `.gitignore` template
-
-These are folders created due to personal environment preferences. We should ignore these personal development environment preferences to be ignored using your global `.gitignore` file and leave the project `.gitignore` file as clean as possible, that is, only containing the project specific rules.
-
-You can create a `.gitignore_global` file with rules that will apply to all your repositories with:
-
-```bash
-touch ~/.gitignore_global
-git config --global core.excludesfile ~/.gitignore_global
-```
-
-## 👌 Codely Code Quality Standards
+### 👌 Codely Code Quality Standards
 
 Publishing this package we are committing ourselves to the following code quality standards:
 
@@ -88,7 +115,3 @@ Publishing this package we are committing ourselves to the following code qualit
 - ✅ **Tests** as documentation and usage examples
 - 📖 **Well documented ReadMe** showing how to install and use
 - ⚖️ **License favoring Open Source** and collaboration
-
-## 🔀 Related information
-
-This application was generated using the [<⚡⚛️> TypeScript React Library Template](https://github.com/CodelyTV/typescript-react_library-vite_template). Feel free to check it out and star the repo! 🌟😊🙌

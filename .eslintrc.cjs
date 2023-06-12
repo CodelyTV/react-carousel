@@ -20,6 +20,7 @@ module.exports = {
 				"tests/**/*.cy.tsx",
 				"tests/tests-config/cypress/**/*.ts",
 				"tests/tests-helpers/**/*.ts",
+				"tests/tests-helpers/**/*.tsx",
 			],
 			parserOptions: {
 				project: ["./tests/tsconfig.json"],

@@ -6,7 +6,7 @@ import { ArrowLeft } from "./ArrowLeft";
 import { ArrowRight } from "./ArrowRight";
 import { scrollSliderNext, scrollSliderPrevious } from "./core/scroll";
 
-interface CarouselProps {
+export interface CarouselProps {
 	children: JSX.Element[];
 	prevAriaLabel?: string;
 	nextAriaLabel?: string;

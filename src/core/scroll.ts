@@ -28,14 +28,8 @@ export function scrollSliderNext(slider: HTMLElement): void {
 }
 
 export function scrollSliderPrevious(slider: HTMLElement): void {
-	if (!slider.parentElement) {
-		throw new Error("Could not find carousel div");
-	}
-
-	const carouselWidth = slider.parentElement.clientWidth;
-
 	if (slider.scrollLeft === 0) {
-		scrollSliderTo(slider, carouselWidth);
+		scrollSliderTo(slider, slider.scrollWidth);
 
 		return;
 	}
@@ -55,6 +49,11 @@ export function scrollSliderPrevious(slider: HTMLElement): void {
 		return;
 	}
 
+	if (!slider.parentElement) {
+		throw new Error("Could not find carousel div");
+	}
+
+	const carouselWidth = slider.parentElement.clientWidth;
 	let accumulatedWidth = 0;
 	let slideToScrollTo = slides[firstVisibleSlideIndex];
 

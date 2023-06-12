@@ -5,6 +5,7 @@ import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
+	publicDir: false,
 	plugins: [react(), dts(), cssInjectedByJsPlugin()],
 	build: {
 		lib: {

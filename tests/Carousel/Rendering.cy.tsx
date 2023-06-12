@@ -1,4 +1,4 @@
-import { Carousel } from "../src/Carousel";
+import { Carousel } from "../../src/Carousel";
 
 describe("<Carousel />", () => {
 	it("renders children as slides", () => {

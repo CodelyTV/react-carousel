@@ -11,7 +11,7 @@ compile:
 
 .PHONY: test
 test:
-	npm test
+	npm run cy:run
 
 .PHONY: lint
 lint:

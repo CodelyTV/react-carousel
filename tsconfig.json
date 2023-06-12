@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "downlevelIteration": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -22,8 +23,7 @@
   },
   "include": [
     "src",
-    "tests/**/*.spec.tsx",
-    "tests/tests-config/jest/**/*.ts",
+    "tests/**/*.ts",
     "cypress.config.ts",
     "vite.config.ts"
   ]

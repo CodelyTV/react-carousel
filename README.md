@@ -21,64 +21,12 @@
   <a href="https://github.com/CodelyTV/typescript-react_library-vite_template/stargazers">Stars are welcome 😊</a>
 </p>
 
-## ⚡ Using this Vite template
-
-1. Create your project based on this template:
-   - a) If you want to create a GitHub repository, we would recommend to use the GitHub "Use this template" button and clone your newly created repository
-   - b) If you prefer to just create a local project, you can use [degit](https://github.com/Rich-Harris/degit):
-     ```bash
-     npx degit CodelyTV/typescript-react_library-vite_template#main my-app
-     ```
-2. Update your project meta-information:
-   - [ ] Update the [`package.json`](https://github.com/CodelyTV/typescript-react_library-vite_template/blob/main/package.json):
-     - [ ] Specify proper values for the `name`, `author` and `license` properties
-     - [ ] Specify the file name for the `main` and `module` properties
-     - [ ] If you wish to expose multiple entry points, follow this structure:
-     ```
-      {
-        "name": "my-component",
-        "type": "module",
-        "files": ["dist"],
-        "main": "./dist/my-component.cjs",
-        "module": "./dist/my-component.js",
-        "exports": {
-          ".": {
-            "import": "./dist/my-component.js",
-            "require": "./dist/my-component.cjs"
-          },
-          "./secondary": {
-            "import": "./dist/secondary.js",
-            "require": "./dist/secondary.cjs"
-          }
-        }
-      }
-      ```
-   - [ ] Change the `name` and `fileName` in [`vite.config.ts`](https://github.com/CodelyTV/typescript-react_library-vite_template/blob/main/vite.config.ts) to match the file name specified in the `package.json`
-   - [ ] Change the author in [`LICENSE`](https://github.com/CodelyTV/typescript-react_library-vite_template/blob/main/LICENSE)
-   - [ ] Clean up this [`README.md`](https://github.com/CodelyTV/typescript-react_library-vite_template/blob/main/README.md)
-3. Set up your GitHub Actions workflow:
-   - [ ] If you do **not** wish to publish to npm, you can delete the `.github/workflows/publish.yml`
-   - [ ] If you do wish to publish to npm, you can delete the `.github/workflows/CI.yml` and set up your token following [the instructions below](#-ci-and-publishing).
-4. Run your library:
-   1. `cd my-library`: Move to your project root directory
-   2. `npm install`: Install all the project dependencies
-   3. `npm run docs`: Start the Storybook dev mode on [localhost:6006](http://localhost:6006)
-
 ## 📚 Documentation
 
 - `npm run docs`: Run Storybook documentation in dev mode
 - `npm run build:docs`: Build Storybook documentation
 
 ## ✅ Testing
-
-This template comes with both Jest and Cypress component testing. Since this is a template for a component library, we feel it doesn't make sense to use the `e2e` Cypress option, but feel free to change it to your needs.
-
-### Unit tests
-
-`npm run test`: Run unit tests with Jest and React Testing Library
-`npm run test:watch`: Run unit tests on watch mode
-
-### Component tests
 
 ```
   npm run cy:open: Open Cypress in dev mode
@@ -111,7 +59,6 @@ Read the [full documentation on the npm-publish action](https://github.com/JS-De
 - [TypeScript](https://www.typescriptlang.org)
 - [Storybook](https://storybook.js.org/)
 - [ESLint](https://eslint.org) and [Prettier](https://prettier.io) already configured with the [🤏 Codely's configuration](https://github.com/CodelyTV/eslint-config-codely)
-- [Jest](https://jestjs.io) with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) for the unit tests
 - [Cypress](https://www.cypress.io/) with [Testing Library](https://testing-library.com/docs/cypress-testing-library) for acceptance/component tests
 - [GitHub Action Workflows](https://github.com/features/actions) set up to run tests and linting on push
 - [Makefile](https://github.com/CodelyTV/typescript-react_library-vite_template/blob/main/Makefile) for standardize how to run projects

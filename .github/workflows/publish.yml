@@ -23,9 +23,6 @@ jobs:
       - name: 💅 Lint
         run: npm run lint
 
-      - name: 🧪 Unit Tests
-        run: npm run test
-
       - name: 🧑‍🔬 Component Tests
         run: npm run cy:run
 

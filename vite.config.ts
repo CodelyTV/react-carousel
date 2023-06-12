@@ -9,8 +9,8 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: resolve(__dirname, "src/index.ts"),
-			name: "MyComponent",
-			fileName: "my-component",
+			name: "Carousel",
+			fileName: "react-carousel",
 		},
 		rollupOptions: {
 			external: ["react"],

@@ -1,0 +1,16 @@
+.carousel {
+  width: 100%;
+  overflow: hidden;
+
+  &__slider {
+    display: flex;
+    gap: var(--slider-gap, 0);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

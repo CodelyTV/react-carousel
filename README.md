@@ -32,6 +32,18 @@
 - Show next/previous items partially
 - Works with server-side rendering
 
+## 👀 Demos
+
+View the full [Storybook documentation](https://react-carousel.codely.com/).
+
+- [Standard Carousel](https://react-carousel.codely.com/?path=/story/carousel--default)
+- [Variable Slides](https://react-carousel.codely.com/?path=/story/carousel--variable-slides)
+- [With Gap](https://react-carousel.codely.com/?path=/story/carousel--with-gap)
+- [With Custom Button Content](https://react-carousel.codely.com/?path=/story/carousel--with-custom-button-content)
+- [With Custom Aria Labels](https://react-carousel.codely.com/?path=/story/carousel--with-custom-aria-labels)
+- [Button Styling](https://react-carousel.codely.com/?path=/story/carousel--button-styling)
+
+
 ## ⚙️ How to use
 
 1. Install the dependency

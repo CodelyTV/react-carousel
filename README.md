@@ -70,7 +70,7 @@ View the full [Storybook documentation](https://react-carousel.codely.com/).
     ```
     The carousel automatically detects the size of each slide and when navigating via buttons, it will scroll smoothly until the first not visible slide is in view.
 
-### Props
+### 🎛️ Props
 
 | Name                             | Value               | Default                     | Description                 |
 | -------------------------------- | ------------------- | --------------------------- | --------------------------- |
@@ -117,7 +117,7 @@ If this is not enough, you can always style via CSS classes. They all have low s
 - `npm run lint`: Run linter
 - `npm run lint:fix`: Fix lint issues
 
-### 👌 Codely Code Quality Standards
+## 👌 Codely Code Quality Standards
 
 Publishing this package we are committing ourselves to the following code quality standards:
 

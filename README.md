@@ -43,62 +43,61 @@ View the full [Storybook documentation](https://react-carousel.codely.com/).
 - [With Custom Aria Labels](https://react-carousel.codely.com/?path=/story/carousel--with-custom-aria-labels)
 - [Button Styling](https://react-carousel.codely.com/?path=/story/carousel--button-styling)
 
-
 ## ⚙️ How to use
 
 1. Install the dependency
-    ```
-    npm install @codelytv/react-carousel
-    ```
-    or
-    ```
-    yarn @codelytv/react-carousel
-    ```
+   ```sh
+   npm install @codelytv/react-carousel
+   ```
+   or
+   ```sh
+   yarn @codelytv/react-carousel
+   ```
 2. Import and use:
-    ```
-      import { Carousel } from "@codelytv/react-carousel"
-    ```
-    ```jsx
-    <Carousel>
-      <div>A simple slide</div>
-      <div><img src="https://placekitten.com/500/500" alt="a slide can contain anything" /></div>
-      <article>
-        <h2>It can be any tag</h2>
-        <p>and contain any number of items</p>
-      </article>
-    </Carousel>
-    ```
-    The carousel automatically detects the size of each slide and when navigating via buttons, it will scroll smoothly until the first not visible slide is in view.
+   ```javascript
+   import { Carousel } from "@codelytv/react-carousel"
+   ```
+   ```jsx
+   <Carousel>
+     <div>A simple slide</div>
+     <div><img src="https://placekitten.com/500/500" alt="a slide can contain anything" /></div>
+     <article>
+       <h2>It can be any tag</h2>
+       <p>and contain any number of items</p>
+     </article>
+   </Carousel>
+   ```
+   The carousel automatically detects the size of each slide and when navigating via buttons, it will scroll smoothly until the first not visible slide is in view.
 
 ### 🎛️ Props
 
-| Name                             | Value               | Default                     | Description                 |
-| -------------------------------- | ------------------- | --------------------------- | --------------------------- |
-| prevButtonContent                | `React.ReactNode`   | [`<ArrowLeft />`](https://github.com/CodelyTV/react-carousel/tree/main/src/components/ArrowLeft.tsx)   | The HTML content of the previous navigation button |
-| nextButtonContent                | `React.ReactNode`   | [`<ArrowRight />`](https://github.com/CodelyTV/react-carousel/tree/main/src/components/ArrowRight.tsx) | The HTML content of the next navigation button     |
-| prevAriaLabel                    | `string`            | "Previous"                  | Defines the previous navigation button `aria-label` attribute. Useful when the button content is an element without accessible text. |
-| nextAriaLabel                    | `string`            | "Next"                      | Defines the previous navigation button `aria-label` attribute. Useful when the button content is an element without accessible text. |
+| Name                | Value               | Default                     | Description                 |
+| ------------------- | ------------------- | --------------------------- | --------------------------- |
+| `prevButtonContent` | `React.ReactNode`   | [`<ArrowLeft />`](https://github.com/CodelyTV/react-carousel/tree/main/src/components/ArrowLeft.tsx)   | The HTML content of the previous navigation button |
+| `nextButtonContent` | `React.ReactNode`   | [`<ArrowRight />`](https://github.com/CodelyTV/react-carousel/tree/main/src/components/ArrowRight.tsx) | The HTML content of the next navigation button     |
+| `prevAriaLabel`     | `string`            | "Previous"                  | Defines the previous navigation button `aria-label` attribute. Useful when the button content is an element without accessible text. |
+| `nextAriaLabel`     | `string`            | "Next"                      | Defines the previous navigation button `aria-label` attribute. Useful when the button content is an element without accessible text. |
 
 ### 🎨 Styling
 There are some CSS Variables that will help you style the carousel:
 
-| Name                             | Default             | Description                                   |
-| -------------------------------- | ------------------- | --------------------------------------------- |
-| --slider-gap                     | 0                   | Sets the gap between slides                   |
-| --slider-nav-margin-top          | 0.5rem              | Sets the top margin of the navigation buttons |
-| --slider-button-width            | 2.5rem              | Sets the navigation buttons width             |
-| --slider-button-height           | 2.5rem              | Sets the navigation buttons height            |
-| --slider-button-padding          | 0.2rem              | Sets the padding of the navigation buttons    |
+| Name                      | Default             | Description                                   |
+| ------------------------- | ------------------- | --------------------------------------------- |
+| `--slider-gap`            | `0`                 | Sets the gap between slides                   |
+| `--slider-nav-margin-top` | `0.5rem`            | Sets the top margin of the navigation buttons |
+| `--slider-button-width`   | `2.5rem`            | Sets the navigation buttons width             |
+| `--slider-button-height`  | `2.5rem`            | Sets the navigation buttons height            |
+| `--slider-button-padding` | `0.2rem`            | Sets the padding of the navigation buttons    |
 
 If this is not enough, you can always style via CSS classes. They all have low specificity so they are easy to overwrite, but be careful, changing this elements could cause the carousel to break. Try to limit the changes to colors, background, etc. to prevent unexpected results.
 
-| Class                 | Description                            |
-| --------------------- | -------------------------------------- |
-| .carousel             | The main carousel wrapper              |
-| .carousel__slider     | The carousel scroller                  |
-| .carousel__slide      | The wrapper for each slide             |
-| .carousel__nav        | The wrapper for the navigation buttons |
-| .carousel__button     | The navigation buttons                 |
+| Class               | Description                            |
+| ------------------- | -------------------------------------- |
+| `.carousel`         | The main carousel wrapper              |
+| `.carousel__slider` | The carousel scroller                  |
+| `.carousel__slide`  | The wrapper for each slide             |
+| `.carousel__nav`    | The wrapper for the navigation buttons |
+| `.carousel__button` | The navigation buttons                 |
 
 
 ## 🤝 Contributing

@@ -16,6 +16,9 @@
 </p>
 
 <p align="center">
+  A React Carousel supporting different slides sizes, responsive, custom styling, accesible by default, SSR compatible, and tested.
+  <br />
+  <br />
   <a href="https://github.com/CodelyTV/react-carousel/stargazers">Stars are welcome 😊</a>
 </p>
 

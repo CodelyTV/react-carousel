@@ -54,7 +54,7 @@ View the full [Storybook documentation](https://react-carousel.codely.com/).
    ```
    or
    ```sh
-   yarn @codelytv/react-carousel
+   yarn add @codelytv/react-carousel
    ```
 2. Import and use:
    ```javascript

@@ -43,11 +43,17 @@ export function Carousel({
 		scrollSliderPrevious(slider);
 	}
 
+	function uuid() {
+		return (
+			Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+		);
+	}
+
 	return (
 		<div className="carousel">
 			<div ref={slider} className="carousel__slider">
-				{children.map((child, index) => (
-					<div key={index} className="carousel__slide">
+				{children.map((child) => (
+					<div key={uuid()} className="carousel__slide">
 						{child}
 					</div>
 				))}
